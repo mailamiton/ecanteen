@@ -1,0 +1,65 @@
+#Ignore Traget Folder Completly#
+np-api/target/*
+np-api/bin/*
+np-dao/target/*
+np-dao/bin/*
+np-integration/target/*
+np-integration/bin/*
+np-model/target/*
+np-model/bin/*
+
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*~
+
+np-api/.project
+np-dao/.project
+np-integration/.project
+np-model/.project
+np-exception/.project
+np-scraper/.project
+np-sms/.project
+np-api/.checkstyle
+np-model/.checkstyle
+np-dao/.checkstyle
+np-integration/.checkstyle
+np-exception/.checkstyle
+np-sms/.checkstyle
+ 
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.settings
+*.clanpath
+ 
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+ 
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

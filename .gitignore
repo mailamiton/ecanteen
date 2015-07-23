@@ -47,6 +47,7 @@ np-sms/.checkstyle
 *.zip
 *.settings
 *.clanpath
+*.classpath
  
 # Logs and databases #
 ######################
@@ -63,3 +64,10 @@ np-sms/.checkstyle
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+np-api/.classpath
+np-api/.project
+np-api/.settings/org.eclipse.core.resources.prefs
+np-api/.settings/org.eclipse.wst.common.component
+np-api/.settings/org.eclipse.wst.common.project.facet.core.xml
+

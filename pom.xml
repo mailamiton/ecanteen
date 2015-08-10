@@ -13,8 +13,11 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <spring.version>4.1.7.RELEASE</spring.version>
+    <spring.jdbc.version>4.2.0.RELEASE</spring.jdbc.version>
     <module.version>1.0</module.version>
     <hibernate.version>4.3.10.Final</hibernate.version>
+    <hibernate.aggregator>3.5.4-Final</hibernate.aggregator>
+    <mysql.connector.version>5.1.9</mysql.connector.version>
   </properties>
 
 <dependencyManagement>
@@ -42,18 +45,40 @@
             <version>${spring.version}</version>
         </dependency>
         <dependency>
+  			<groupId>org.springframework</groupId>
+  			<artifactId>spring-webmvc</artifactId>
+  			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
+			<artifactId>spring-tx</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${spring.jdbc.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
 <!--Spring Dependency-->
 <!--Hibernate Dependency-->
-    <dependency>
+        <dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>${hibernate.version}</version>
 		</dependency>
 <!--Hibernate Dependency-->
+<!-- MySQL database driver -->
+      <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>${mysql.connector.version}</version>
+      </dependency>
+<!-- MySQL database driver -->
 <!--Third Party Dependencies-->
 
 <!--Project Dependencies-->

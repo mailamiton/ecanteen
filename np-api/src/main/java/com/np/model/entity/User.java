@@ -1,6 +1,5 @@
 package com.np.model.entity;
 
-
 import java.io.Serializable;
 
 import javax.persistence.Column;
@@ -12,16 +11,17 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "USER")
-public class User  implements Serializable {
+public class User implements Serializable{
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 5595439064351790339L;
+
 	@Id
-	@Column(name = "Id", unique = true, nullable = false)
-	@GeneratedValue(strategy = GenerationType.AUTO)
-    private String Id;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+    private long Id;
 	
 	@Column(name = "username", unique = true, nullable = false, length = 45)
 	private String username;

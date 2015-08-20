@@ -1,22 +1,24 @@
 package com.np.model.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 @Entity
-@Table(name = "m_user_role")
-public class UserRole {
+@Table(name = "m_role")
+public class Role implements Serializable{
+
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,8 +30,7 @@ public class UserRole {
 	
 	@Column(name = "created_dt",  nullable = false, length = 45)
 	private Date createdDt; 
-	
-	
+		
 	@Column(name = "last_upd_by",  nullable = false, length = 45)
 	private String lastUpdBy; 
 	
@@ -39,12 +40,15 @@ public class UserRole {
 	@Column(name = "enabled", nullable = true)
 	private boolean enabled;
 		
-	@OneToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="user_id")
-	private User userId;
+	@Column(name = "role_name", unique = true, nullable = false, length = 45)
+	private String roleName;
 	
-	@OneToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name = "role_id")
-	private Role role;
-		
+	@Column(name = "role_desc", nullable = false, length = 45)
+	private String roleDesc;
+	
+	
+	public Role() {
+	}
+ 
+			
 }

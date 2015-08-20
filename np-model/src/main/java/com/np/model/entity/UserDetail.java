@@ -11,12 +11,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 @Entity
-@Table(name = "m_user_role")
-public class UserRole {
+@Table(name = "m_user_detail")
+public class UserDetail {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,8 +26,7 @@ public class UserRole {
 	
 	@Column(name = "created_dt",  nullable = false, length = 45)
 	private Date createdDt; 
-	
-	
+		
 	@Column(name = "last_upd_by",  nullable = false, length = 45)
 	private String lastUpdBy; 
 	
@@ -38,13 +35,30 @@ public class UserRole {
 	
 	@Column(name = "enabled", nullable = true)
 	private boolean enabled;
-		
-	@OneToOne(fetch=FetchType.LAZY)
+	
 	@JoinColumn(name="user_id")
+	@OneToOne(fetch=FetchType.LAZY)
 	private User userId;
 	
-	@OneToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name = "role_id")
-	private Role role;
-		
+	@Column(name = "first_name", unique = false, nullable = false, length = 45)
+	private String firstName;
+	
+	@Column(name = "middle_name", unique = false, nullable = false, length = 45)
+	private String middleName;
+	
+	@Column(name = "last_name", unique = false, nullable = false, length = 45)
+	private String lastName;
+	
+	@Column(name = "date_of_birth", unique = false, nullable = false, length = 45)
+	private Date dob;
+	
+	@Column(name = "email", unique = false, nullable = false, length = 45)
+	private String email;
+	
+	@Column(name = "phone_one", unique = false, nullable = false, length = 45)
+	private String phoneOne;
+	
+	@Column(name = "phone_two", unique = false, nullable = false, length = 45)
+	private String phoneTwo;
+	
 }

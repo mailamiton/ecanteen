@@ -18,11 +18,17 @@
     <hibernate.version>4.3.10.Final</hibernate.version>
     <hibernate.aggregator>3.5.4-Final</hibernate.aggregator>
     <mysql.connector.version>5.1.9</mysql.connector.version>
+    <commons-logging>1.2</commons-logging>
   </properties>
 
 <dependencyManagement>
     <dependencies>
 <!--Third Party Dependencies-->
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>${commons-logging}</version>
+        </dependency>
 <!--Spring Dependency-->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -93,9 +99,9 @@
          <version>${module.version}</version>
      </dependency>
      <dependency>
-		<groupId>commons-logging</groupId>
-		<artifactId>commons-logging</artifactId>
-		<version>1.2</version>
+         <groupId>com.np.np-service</groupId>
+         <artifactId>np-service</artifactId>
+         <version>${module.version}</version>
      </dependency>
 <!--Project Dependencies-->     
 	</dependencies>
@@ -118,5 +124,6 @@
      <modules>
         <module>np-api</module>
         <module>np-model</module>
+        <module>np-service</module>
     </modules>
 </project>

@@ -1,45 +1,20 @@
 package com.np.model.entity;
 
-import java.io.Serializable;
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.Table;
+
+import com.np.model.entity.core.AbstractBaseModel;
 
 @Entity
 @Table(name = "m_addrs")
-public class Address implements Serializable{
-
-	
+public class Address extends AbstractBaseModel{
+		
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
-    private long Id;
-	
-	@Column(name = "created_by", nullable = false, length = 45)
-	private String createdBy; 
-	
-	@Column(name = "created_dt",  nullable = false, length = 45)
-	private Date createdDt; 
-		
-	@Column(name = "last_upd_by",  nullable = false, length = 45)
-	private String lastUpdBy; 
-	
-	@Column(name = "last_upd_dt",  nullable = false, length = 45)
-	private Date lastUpdDate; 
-	
-	@Column(name = "enabled", nullable = true)
-	private boolean enabled;
-		
 	@Column(name = "line1", nullable = true, length = 45)
 	private String addressLine1;
 	

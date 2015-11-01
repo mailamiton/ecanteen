@@ -2,6 +2,9 @@ package com.np.model.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.np.model.entity.core.AbstractBaseModel;
@@ -15,6 +18,10 @@ public class User extends AbstractBaseModel {
 	 */
 	private static final long serialVersionUID = 5595439064351790339L;
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+    private long Id;
 		
 	@Column(name = "username", unique = true, nullable = false, length = 45)
 	private  String userName;

@@ -19,6 +19,7 @@
     <hibernate.aggregator>3.5.4-Final</hibernate.aggregator>
     <mysql.connector.version>5.1.9</mysql.connector.version>
     <commons-logging>1.2</commons-logging>
+    <javax.mail.version>1.4.1</javax.mail.version>
   </properties>
 
 <dependencyManagement>
@@ -70,6 +71,11 @@
 			<artifactId>spring-orm</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+		<dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>${javax.mail.version}</version>
+       </dependency>
 <!--Spring Dependency-->
 <!--Hibernate Dependency-->
         <dependency>
@@ -125,5 +131,6 @@
         <module>np-api</module>
         <module>np-model</module>
         <module>np-service</module>
+        <module>np-mail</module>
     </modules>
 </project>

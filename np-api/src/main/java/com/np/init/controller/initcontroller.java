@@ -21,7 +21,7 @@ public class initcontroller {
     public String login() {
     	System.out.println("Hello MediaCenter!!");
     	User usr = new User();
-    	usr.setId(1);
+    	//usr.setId(1);
     	usr.setUserName("amit");
     	usr.setPassword("amit");
     	usr.setCreatedDt(new Date());

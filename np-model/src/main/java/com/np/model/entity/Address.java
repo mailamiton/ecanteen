@@ -2,10 +2,12 @@ package com.np.model.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.np.model.entity.core.AbstractBaseModel;
-
 @Entity
 @Table(name = "m_addrs")
 public class Address extends AbstractBaseModel{
@@ -15,6 +17,11 @@ public class Address extends AbstractBaseModel{
 	 */
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+    private long Id;
+	
 	@Column(name = "line1", nullable = true, length = 45)
 	private String addressLine1;
 	

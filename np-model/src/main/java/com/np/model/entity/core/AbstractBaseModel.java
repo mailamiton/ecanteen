@@ -5,6 +5,7 @@ import java.util.Date;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -15,6 +16,7 @@ import javax.persistence.TemporalType;
 
 import com.np.model.entity.User;
 
+@Entity
 public abstract class  AbstractBaseModel implements Serializable{
 
 	private static final long serialVersionUID = -6912339810633466236L;
@@ -41,14 +43,6 @@ public abstract class  AbstractBaseModel implements Serializable{
 	
 	@Column(name = "enabled", nullable = true)
 	private boolean enabled;
-
-	public long getId() {
-		return Id;
-	}
-
-	public void setId(long id) {
-		Id = id;
-	}
 
 	public User getUserId() {
 		return userId;

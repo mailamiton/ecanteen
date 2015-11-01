@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.np.mediacenter</groupId>
+        <artifactId>webapp</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.np.api</groupId>
+    <artifactId>np-api</artifactId>
+    <version>1.0</version>
+    <packaging>war</packaging>
+    <name>MediaCenter api</name>
+    <!-- ================================================================================ -->
+    <!-- Common properties -->
+    <!-- ================================================================================ -->
+    <properties>
+        <!-- Project properties -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.javaVersion>1.7</project.build.javaVersion>
+        <!-- Dependencies -->
+    </properties>
+    <!-- ================================================================================ -->
+    <!-- Common properties -->
+    <!-- ================================================================================ -->
+
+    <dependencies>
+        <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-web</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+    </dependency>
+    </dependencies>
+    <build>
+        <finalName>np-api</finalName>
+    </build>
+</project>
